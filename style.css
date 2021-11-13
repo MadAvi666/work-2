@@ -131,7 +131,7 @@ main {
   z-index: 7;
   overflow-x: hidden;
   background: #0a0914;
-  height: 2000px;
+  height: 3000px;
 }
 
 .astro {
@@ -346,6 +346,45 @@ body {
   margin-left: 9px;
 }
 
+.actual-airdrop-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: 1440px;
+  width: 100%;
+  border-bottom: 1px solid #4c4a5f;
+}
+
+.actual-airdrop-frame {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 30px 0;
+  max-width: 580px;
+}
+
+.actual-airdrop-title {
+  font-family: adineue PRO Cyr;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 38px;
+  background: linear-gradient(265.34deg, #21d4fd 21.26%, #e40ecf 66.55%),
+    linear-gradient(0deg, #ffffff, #ffffff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.actual-airdrop-frame p {
+  font-family: Lab Grotesque;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 21px;
+  color: white;
+}
+
 @media (min-width: 1200px) {
   header {
     height: 72px;
@@ -460,5 +499,26 @@ body {
   .arrow-in-circle {
     height: 130px;
     width: 130px;
+  }
+
+  .actual-airdrop-container {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .actual-airdrop-frame {
+    margin-right: 40px;
+  }
+
+  .actual-airdrop-frame:last-child {
+    margin-right: 0;
+  }
+
+  .actual-airdrop-frame img {
+    width: 580px;
+    height: 378px;
+    border-radius: 7px;
+    box-shadow: -5px 13px 28px 14px rgba(255, 72, 250, 0.26),
+      15px -8px 37px 5px rgba(73, 39, 255, 0.26);
   }
 }
