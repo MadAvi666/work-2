@@ -130,6 +130,8 @@ main {
   margin: 0 auto;
   z-index: 7;
   overflow-x: hidden;
+  background: #0a0914;
+  height: 2000px;
 }
 
 .astro {
@@ -143,6 +145,10 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /*--------------------------------------*/
@@ -199,7 +205,7 @@ body {
 
 .text-container {
   position: relative;
-  margin: 61px 0 150px 0;
+  margin: 61px 0 294px 0;
   padding-left: 7px;
   width: 100%;
   z-index: 6;
@@ -258,8 +264,10 @@ body {
   max-width: 1200px;
   width: 100%;
   z-index: 10;
-  margin: 36px 0;
-  padding: 0 10px;
+  margin: 40px 0;
+  padding: 0 10px 0 8px;
+  display: flex;
+  justify-content: center;
 }
 
 .text-wrapp p {
@@ -270,12 +278,7 @@ body {
   line-height: 27px;
   color: white;
   z-index: 10;
-}
-
-.test-container {
-  height: 700px;
-  width: 100%;
-  background: #0a0914;
+  height: 201px;
 }
 
 .main-description {
@@ -301,7 +304,6 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 350px;
   padding: 0 10px;
 }
 
