@@ -238,10 +238,12 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
+  padding: 0 10px;
 }
 
 .button-frame {
-  width: 300px;
+  max-width: 576px;
+  width: 100%;
   height: 63px;
   background: linear-gradient(262.17deg, #21d4fd -9.98%, #e40ecf 62.2%);
   border-radius: 7px;
@@ -373,6 +375,20 @@ body {
     display: block;
   }
 
+  .main-text {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 79px;
+    line-height: 75px;
+  }
+
+  .main-text-2 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 79px;
+    line-height: 78px;
+  }
+
   .text-container {
     padding-left: 117px;
     margin-bottom: 56px;
@@ -382,6 +398,10 @@ body {
   .button-container {
     display: block;
     padding-left: 117px;
+  }
+
+  .button-frame {
+    width: 300px;
   }
 
   .text-wrapp {
