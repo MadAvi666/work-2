@@ -264,7 +264,7 @@ body {
   max-width: 1200px;
   width: 100%;
   z-index: 10;
-  margin: 40px 0;
+  margin: 40px 0 10px 0;
   padding: 0 10px 0 8px;
   display: flex;
   justify-content: center;
@@ -282,7 +282,7 @@ body {
 }
 
 .main-description {
-  max-width: 425px;
+  max-width: 1440px;
   width: 100%;
   height: auto;
   display: flex;
@@ -298,13 +298,15 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  max-width: 425px;
 }
 
 .description-content-container {
+  max-width: 425px;
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 0 10px;
+  padding: 0 8px;
 }
 
 .description-p {
@@ -319,7 +321,7 @@ body {
 .description-content {
   display: flex;
   height: 82px;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -339,6 +341,7 @@ body {
 .arrow-in-circle {
   height: 60px;
   width: 60px;
+  margin-left: 9px;
 }
 
 @media (min-width: 1200px) {
@@ -368,5 +371,74 @@ body {
 
   .header-avatar {
     display: block;
+  }
+
+  .text-container {
+    padding-left: 117px;
+    margin-bottom: 56px;
+    margin-top: 149px;
+  }
+
+  .button-container {
+    display: block;
+    padding-left: 117px;
+  }
+
+  .text-wrapp {
+    margin-top: 223px;
+    max-width: 1440px;
+    padding-left: 117px;
+    display: block;
+    margin-bottom: 100px;
+  }
+
+  .text-wrapp p {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 41px;
+    line-height: 55px;
+    width: 623px;
+    height: auto;
+  }
+
+  .main-description {
+    flex-direction: row;
+    height: 391px;
+  }
+
+  .description-image-container {
+    height: 391px;
+    width: 391px;
+    margin-right: 251px;
+    padding-bottom: 70px;
+  }
+
+  .description-p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 19px;
+    line-height: 32px;
+  }
+
+  .description-content-container {
+    height: 391px;
+    max-width: 586px;
+  }
+
+  .description-content {
+    margin-top: 29px;
+    height: auto;
+  }
+
+  .description-content p {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 42px;
+    line-height: 44px;
+  }
+
+  .arrow-in-circle {
+    height: 130px;
+    width: 130px;
   }
 }
