@@ -1,0 +1,370 @@
+@font-face {
+  font-family: "Axiforma";
+  src: url("fonts/Axiforma-Regular.woff2") format("woff2"),
+    url("fonts/Axiforma-Regular.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("fonts/DMSans-Bold.woff2") format("woff2"),
+    url("fonts/DMSans-Bold.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "adineue PRO Cyr";
+  src: url("fonts/adineuePROCyr-BoldWeb.woff2") format("woff2"),
+    url("fonts/adineuePROCyr-BoldWeb.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lab Grotesque";
+  src: url("fonts/LabGrotesque-Regular.woff2") format("woff2"),
+    url("fonts/LabGrotesque-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+}
+
+header {
+  position: relative;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.46);
+  display: flex;
+  height: 55px;
+  justify-content: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.19);
+}
+
+.header-container {
+  position: relative;
+  max-width: 768px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 11px;
+  padding-right: 10px;
+}
+
+.header-container nav {
+  width: 782px;
+}
+
+.header-container ul {
+  justify-content: space-between;
+  color: #aeaeae;
+}
+
+.header-logo {
+  width: 106px;
+}
+
+.header-container li {
+  font-family: "Axiforma";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: center;
+}
+
+.header-language-sw {
+  color: #f5f5f5;
+  width: 16px;
+  height: 16px;
+  margin-right: 35px;
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.text-highlight {
+  color: #21d4fd;
+}
+
+.right-block {
+  display: flex;
+}
+
+.header-nav {
+  display: none;
+}
+
+.contacts-container {
+  display: none;
+}
+
+.header-avatar {
+  display: none;
+}
+
+main {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-self: center;
+  flex-direction: column;
+  margin: 0 auto;
+  z-index: 7;
+  overflow-x: hidden;
+}
+
+.astro {
+  margin-top: 100px;
+  z-index: -1;
+}
+
+body {
+  position: relative;
+  background: url("img/backgr.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+
+/*--------------------------------------*/
+.main-container {
+  position: absolute;
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+  overflow-x: hidden;
+  align-items: center;
+}
+
+.main-content-container {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.gradient-1 {
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 448px;
+  height: 448px;
+}
+
+.gradient-2 {
+  z-index: 1;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 283px;
+  height: 283px;
+}
+
+.cube1 {
+  position: absolute;
+  top: 6px;
+  z-index: 2;
+  left: 0;
+}
+
+.cube2 {
+  position: absolute;
+  top: 13px;
+  right: 0;
+  z-index: 2;
+}
+
+.text-container {
+  position: relative;
+  margin: 61px 0 150px 0;
+  padding-left: 7px;
+  width: 100%;
+  z-index: 6;
+}
+
+.main-text {
+  font-family: "adineue PRO Cyr";
+  font-weight: bold;
+  font-style: normal;
+  font-size: 44px;
+  line-height: 45px;
+  color: white;
+}
+
+.main-text-2 {
+  font-family: "adineue PRO Cyr";
+  font-weight: bold;
+  font-style: normal;
+  font-size: 44px;
+  line-height: 45px;
+  background: linear-gradient(350.71deg, #21d4fd 20.56%, #e40ecf 70.92%),
+    linear-gradient(0deg, #ffffff, #ffffff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.button-container {
+  max-width: 1440px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.button-frame {
+  width: 300px;
+  height: 63px;
+  background: linear-gradient(262.17deg, #21d4fd -9.98%, #e40ecf 62.2%);
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 7;
+}
+
+.button-frame p {
+  color: white;
+  font-family: "adineue PRO Cyr";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 75px;
+}
+
+.text-wrapp {
+  max-width: 1200px;
+  width: 100%;
+  z-index: 10;
+  margin: 36px 0;
+  padding: 0 10px;
+}
+
+.text-wrapp p {
+  font-family: "adineue PRO Cyr";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 27px;
+  color: white;
+  z-index: 10;
+}
+
+.test-container {
+  height: 700px;
+  width: 100%;
+  background: #0a0914;
+}
+
+.main-description {
+  max-width: 425px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.description-image-container {
+  width: 100%;
+  position: relative;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.description-content-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 350px;
+  padding: 0 10px;
+}
+
+.description-p {
+  font-family: "Lab Grotesque";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 21px;
+  color: white;
+}
+
+.description-content {
+  display: flex;
+  height: 82px;
+  justify-content: center;
+  align-items: center;
+}
+
+.description-content p {
+  font-family: adineue PRO Cyr;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 25px;
+  background: linear-gradient(265.34deg, #21d4fd 21.26%, #e40ecf 66.55%),
+    linear-gradient(0deg, #ffffff, #ffffff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.arrow-in-circle {
+  height: 60px;
+  width: 60px;
+}
+
+@media (min-width: 1200px) {
+  header {
+    height: 72px;
+  }
+
+  .header-container {
+    max-width: 1440px;
+  }
+
+  .header-logo {
+    width: 184px;
+  }
+
+  .header-hamburger {
+    display: none;
+  }
+
+  .contacts-container {
+    display: block;
+  }
+
+  .header-nav {
+    display: block;
+  }
+
+  .header-avatar {
+    display: block;
+  }
+}
