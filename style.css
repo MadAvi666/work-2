@@ -55,6 +55,44 @@ header {
   border-bottom: 1px solid rgba(255, 255, 255, 0.19);
 }
 
+.header-drop-list {
+  position: absolute;
+  right: 0;
+  top: 55px;
+  height: auto;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 10;
+  border: 1px #a5a5a5 solid;
+  display: none;
+}
+
+.opened {
+  display: block;
+}
+
+.header-drop-list ul {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.header-drop-list ul li {
+  border-bottom: 1px #a5a5a5 solid;
+  text-align: center;
+  font-family: "Lab Grotesque";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 21px;
+  padding: 10px 0;
+}
+
+.header-drop-list ul li:last-child {
+  border-bottom: 0;
+}
+
 .header-container {
   position: relative;
   max-width: 768px;
@@ -71,7 +109,7 @@ header {
   width: 782px;
 }
 
-.header-container ul {
+.header-nav ul {
   justify-content: space-between;
   color: #aeaeae;
 }
@@ -80,7 +118,7 @@ header {
   width: 106px;
 }
 
-.header-container li {
+.header-nav li {
   font-family: "Axiforma";
   font-style: normal;
   font-weight: normal;
