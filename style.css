@@ -34,6 +34,10 @@
   font-display: swap;
 }
 
+button {
+  border: none;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -58,18 +62,18 @@ header {
 .header-drop-list {
   position: absolute;
   right: 0;
-  top: 55px;
+  top: -700px;
   height: auto;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.85);
-  z-index: 10;
+  z-index: 8;
   border: 1px #a5a5a5 solid;
   border-radius: 0 0 20px 20px;
-  display: none;
+  transition: 0.5s;
 }
 
 .opened {
-  display: block;
+  top: 0;
 }
 
 .header-drop-list ul {
@@ -104,6 +108,7 @@ header {
   justify-content: space-between;
   padding-left: 11px;
   padding-right: 10px;
+  z-index: 10;
 }
 
 .header-container nav {
@@ -126,6 +131,12 @@ header {
   font-size: 14px;
   line-height: 22px;
   text-align: center;
+  cursor: pointer;
+}
+
+.header-nav li:hover {
+  color: white;
+  transition: 0.6s;
 }
 
 .header-language-sw {
@@ -167,10 +178,11 @@ main {
   justify-self: center;
   flex-direction: column;
   margin: 0 auto;
-  z-index: 7;
+  z-index: 1;
   overflow-x: hidden;
+  overflow-y: hidden;
   background: #0a0914;
-  height: 3000px;
+  height: 100%;
 }
 
 .astro {
@@ -192,7 +204,6 @@ body {
 
 /*--------------------------------------*/
 .main-container {
-  position: absolute;
   width: 100%;
   margin: 0 auto;
   height: 100%;
@@ -208,6 +219,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  z-index: 4;
 }
 
 .gradient-1 {
@@ -247,6 +259,7 @@ body {
   margin: 61px 0 294px 0;
   padding-left: 7px;
   width: 100%;
+  max-width: 698px;
   z-index: 6;
 }
 
@@ -302,7 +315,7 @@ body {
 }
 
 .text-wrapp {
-  max-width: 1200px;
+  max-width: 628px;
   width: 100%;
   z-index: 10;
   margin: 40px 0 10px 0;
@@ -340,6 +353,11 @@ body {
   align-items: center;
   justify-content: center;
   max-width: 425px;
+}
+
+.hamburger-rotate {
+  transform: rotate(-90deg);
+  transition: 0.5s;
 }
 
 .description-content-container {
@@ -407,7 +425,7 @@ body {
 }
 
 .actual-airdrop-title {
-  font-family: adineue PRO Cyr;
+  font-family: "adineue PRO Cyr";
   font-style: normal;
   font-weight: bold;
   font-size: 30px;
@@ -436,7 +454,511 @@ body {
   border-radius: 0px;
 }
 
+.actual-airdrop-img-nonhidden {
+  display: block;
+}
+
+.actual-airdrop-img-hidden {
+  display: none;
+}
+
+.completed-airdrops-container {
+  display: flex;
+  max-width: 1440px;
+  width: 100%;
+  justify-content: center;
+  margin: 50px auto;
+  flex-direction: column;
+  align-items: center;
+  z-index: 4;
+}
+
+.completed-airdrops-container h1 {
+  font-family: "adineue PRO Cyr";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 49px;
+  line-height: 50px;
+  color: white;
+  padding: 0 11px 0 10px;
+  margin-bottom: 18px;
+}
+
+.completed-airdrops-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  max-width: 628px;
+}
+
+.completed-airdrops-frame {
+  width: 100%;
+  max-width: 300px;
+  height: 300px;
+  margin: 15px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.completed-airdrops-frame img {
+  border-radius: 7px;
+}
+
+.completed-airdrops-frame h2 {
+  font-family: "adineue PRO Cyr";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 38px;
+  color: white;
+}
+
+.completed-airdrops-frame p {
+  font-family: "Lab Grotesque";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 21px;
+  color: #ffffff;
+  opacity: 0.6;
+}
+
+.ca-frames-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.load-more-button-container {
+  display: flex;
+  max-width: 1440px;
+  width: 100%;
+  height: 66px;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  margin-top: 87px;
+}
+
+.load-more-button-frame {
+  max-width: 576px;
+  width: 100%;
+  height: 100%;
+  border: 1px white solid;
+  border-radius: 11px;
+  display: flex;
+  cursor: pointer;
+  outline: none;
+  background: transparent;
+}
+
+.load-more-button-frame p {
+  color: white;
+  font-family: "adineue PRO Cyr";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 38px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.load-more-button-frame:hover {
+  background-color: white;
+  transition: 0.5s;
+}
+
+.load-more-button-frame p:hover {
+  color: black;
+  transition: 0.5s;
+}
+
+.ca-frame-hidden {
+  display: none;
+}
+
+.emal-input-frame {
+  margin-right: 0;
+}
+
+.subscribe-container {
+  position: relative;
+  width: 100%;
+  max-width: 628px;
+  margin: 98px auto 40px auto;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  z-index: 4;
+}
+
+.subscribe-text {
+  width: 100%;
+  height: 150px;
+  margin-bottom: 10px;
+  font-family: "adineue PRO Cyr";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 49px;
+  line-height: 45px;
+  background: linear-gradient(265.34deg, #21d4fd 21.26%, #e40ecf 66.55%),
+    linear-gradient(0deg, #ffffff, #ffffff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  max-width: 628px;
+}
+
+.email-container {
+  background: linear-gradient(
+    180deg,
+    rgba(7, 196, 239, 0.61) 0%,
+    rgba(7, 196, 239, 0.25) 100%
+  );
+  border-radius: 8px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 29px 17px 37px 16px;
+  flex-direction: column;
+}
+
+.email-input-frame {
+  padding: 0 20px;
+  width: 100%;
+  height: 56px;
+  border: 1px solid #21d4fd;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  background: transparent;
+  font-family: "adineue PRO Cyr";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 32px;
+  color: #ffffff;
+  outline: none;
+}
+
+.email-input-frame::placeholder {
+  font-family: "adineue PRO Cyr";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 32px;
+  color: #ffffff;
+}
+
+.send-info-button {
+  background: #21d4fd;
+  border-radius: 8px;
+  height: 63px;
+  width: 100%;
+  min-width: 247px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px 0 20px;
+  cursor: pointer;
+}
+
+.send-info-button p {
+  font-family: "adineue PRO Cyr";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 32px;
+  color: white;
+}
+
+footer {
+  width: 100%;
+  height: auto;
+  background-color: #161616;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-container {
+  max-width: 628px;
+  width: 100%;
+  height: 100%;
+  padding: 40px 30px 0 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.links-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.links-frame ul li {
+  font-family: "Axiforma";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.link-highlight {
+  font-family: "adineue PRO Cyr";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 27px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.links-frame {
+  width: auto;
+  height: auto;
+}
+
+.connect-with-frame {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.connect-with-frame h3 {
+  text-align: center;
+}
+
+.connect-with-content {
+  display: flex;
+  justify-content: space-around;
+}
+
+.connect-with-frame h1 {
+  width: 100%;
+  height: 30px;
+}
+
+.links-frame ul {
+  flex-direction: column;
+}
+
+.links-container-header {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+
+.download-container {
+  width: 100%;
+}
+
+.download-container h3 {
+  text-align: center;
+  font-family: "Axiforma";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.store-icons-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.store-icons-container img {
+  max-width: 100%;
+  width: 120px;
+  border-radius: 4px;
+}
+
+.download-container p {
+  font-family: "Axiforma";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 22px;
+  color: #aeaeae;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.cube3large {
+  position: absolute;
+  right: 0;
+  top: 3000px;
+  visibility: hidden;
+}
+
+.cube3 {
+  position: absolute;
+  right: 0;
+  top: 3920px;
+}
+
+.cube4 {
+  position: absolute;
+  left: 0;
+  top: 500px;
+  visibility: hidden;
+}
+
+.cube5 {
+  position: absolute;
+  top: -80px;
+  left: 650px;
+  visibility: hidden;
+}
+
+.cube6 {
+  position: absolute;
+  top: 54px;
+  right: 65px;
+  visibility: hidden;
+}
+
+.bot-gr {
+  position: absolute;
+  bottom: -700px;
+  width: 100%;
+  visibility: visible;
+}
+
+.leftbot-gr {
+  position: absolute;
+  left: 0;
+  top: 1200px;
+  display: none;
+  width: 984px;
+  z-index: 1;
+}
+
 @media (min-width: 1200px) {
+  .subscribe-container {
+    max-width: 1440px;
+    padding: 0 120px;
+  }
+
+  .download-container {
+    order: -1;
+    width: 30%;
+  }
+
+  .connect-with-frame h3 {
+    text-align: start;
+  }
+
+  .connect-with-content {
+    justify-content: space-between;
+  }
+
+  .links-container-header .links-frame {
+    margin-right: 150px;
+  }
+
+  .footer-container {
+    max-width: 1440px;
+    flex-direction: row;
+  }
+
+  .connect-with-frame {
+    width: 20%;
+  }
+
+  .download-container p,
+  .download-container h3 {
+    text-align: start;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  .store-icons-container {
+    justify-content: start;
+  }
+
+  .store-icons-container img {
+    margin-right: 10px;
+  }
+
+  .links-container {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .send-info-button {
+    justify-content: center;
+    padding-left: 50px;
+  }
+
+  .send-info-button p {
+    margin-right: 21px;
+  }
+
+  .subscribe-text {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 142px;
+    line-height: 124px;
+    height: 260px;
+    max-width: 1200px;
+    margin-bottom: 120px;
+  }
+
+  .email-container {
+    flex-direction: row;
+    padding: 60px 61px 60px 65px;
+  }
+
+  .email-input-frame {
+    max-width: 808px;
+    margin-right: 18px;
+    height: 63px;
+    margin-bottom: 0;
+    padding: 0 30px;
+  }
+
+  .send-info-button {
+    width: 247px;
+  }
+
+  .completed-airdrops-content {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    flex-wrap: wrap;
+    max-width: 1200px;
+  }
+
+  .ca-frames-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .completed-airdrops-frame {
+    width: 32%;
+    max-width: 373px;
+  }
+
+  .load-more-button-frame {
+    max-width: 280px;
+  }
+
   header {
     height: 72px;
   }
@@ -483,6 +1005,7 @@ body {
     padding-left: 117px;
     margin-bottom: 56px;
     margin-top: 149px;
+    max-width: 1440px;
   }
 
   .button-container {
@@ -566,11 +1089,19 @@ body {
   }
 
   .actual-airdrop-frame img {
-    width: 580px;
+    max-width: 580px;
     height: 378px;
     border-radius: 7px;
     box-shadow: -5px 13px 28px 14px rgba(255, 72, 250, 0.26),
       15px -8px 37px 5px rgba(73, 39, 255, 0.26);
+  }
+
+  .actual-airdrop-img-nonhidden {
+    display: none;
+  }
+
+  .actual-airdrop-img-hidden {
+    display: block;
   }
 
   .actual-airdrop-title {
@@ -603,5 +1134,33 @@ body {
 
   .cube2 {
     visibility: hidden;
+  }
+
+  .cube3 {
+    visibility: hidden;
+  }
+
+  .cube3large {
+    visibility: visible;
+  }
+
+  .ca-frame-hidden {
+    display: block;
+  }
+
+  .load-more-button-container {
+    display: none;
+  }
+
+  .cube4 {
+    visibility: visible;
+  }
+
+  .cube5 {
+    visibility: visible;
+  }
+
+  .cube6 {
+    visibility: visible;
   }
 }
