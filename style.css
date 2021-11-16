@@ -785,6 +785,7 @@ footer {
   max-width: 100%;
   width: 120px;
   border-radius: 4px;
+  height: 40px;
 }
 
 .download-container p {
@@ -893,7 +894,6 @@ footer {
 
   .store-icons-container img {
     margin-right: 10px;
-    height: 40px;
   }
 
   .links-container {
